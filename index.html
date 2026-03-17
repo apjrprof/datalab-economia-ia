@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<title>DataLab Economia e IA</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- PapaParse -->
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>DataLab Economia e Inteligência Artificial</h1>
+
+<p>Painel informativo de dados econômicos e financeiros</p>
+
+</header>
+
+
+<section class="cards">
+
+<div class="card">
+<h3>Ibovespa</h3>
+<p id="ibovespa_value">--</p>
+</div>
+
+<div class="card">
+<h3>Dólar (USD/BRL)</h3>
+<p id="usd_value">--</p>
+</div>
+
+<div class="card">
+<h3>Selic</h3>
+<p id="selic_value">--</p>
+</div>
+
+<div class="card">
+<h3>IPCA</h3>
+<p id="ipca_value">--</p>
+</div>
+
+</section>
+
+
+<section class="charts">
+
+<h2>Indicadores Econômicos</h2>
+
+<div class="chart-container">
+<canvas id="ibovespaChart"></canvas>
+</div>
+
+<div class="chart-container">
+<canvas id="usdChart"></canvas>
+</div>
+
+<div class="chart-container">
+<canvas id="selicChart"></canvas>
+</div>
+
+<div class="chart-container">
+<canvas id="ipcaChart"></canvas>
+</div>
+
+</section>
+
+
+<footer>
+
+<p>Projeto DataLab • Universidade</p>
+
+<a href="data/dataset_macro_mercado_mensal.csv" download>
+Baixar dataset completo
+</a>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
