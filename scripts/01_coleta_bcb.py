@@ -29,8 +29,8 @@ SERIES = {
     "ibc_br_com_ajuste": {"code": 24364, "agg": "last"},
 
     # SETORES
-    "ibc_br_agro_sem_ajuste": {"code": 29601, "agg": "last"},
-    "ibc_br_agro_com_ajuste": {"code": 29602, "agg": "last"},
+    #"ibc_br_agro_sem_ajuste": {"code": 29601, "agg": "last"},
+    #"ibc_br_agro_com_ajuste": {"code": 29602, "agg": "last"},
     "ibc_br_industria_sem_ajuste": {"code": 29603, "agg": "last"},
     "ibc_br_industria_com_ajuste": {"code": 29604, "agg": "last"},
     "ibc_br_servicos_sem_ajuste": {"code": 29605, "agg": "last"},
