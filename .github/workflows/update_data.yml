@@ -1,0 +1,40 @@
+name: Atualizar dados economicos
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # roda todo dia às 06:00 UTC
+  workflow_dispatch:
+
+jobs:
+
+  update-data:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout do repositorio
+        uses: actions/checkout@v3
+
+      - name: Instalar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Instalar dependencias
+        run: |
+          pip install pandas requests yfinance
+
+      - name: Rodar scripts de coleta
+        run: |
+          python scripts/01_coleta_bcb.py
+          python scripts/02_coleta_yfinance.py
+          python scripts/03_junta_bases.py
+
+      - name: Commit dos dados atualizados
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add .
+          git commit -m "Atualizacao automatica dos dados" || echo "Sem mudanças"
+          git push
