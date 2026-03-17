@@ -51,7 +51,7 @@ SERIES = {
     "endividamento_familias": {"code": 19882, "agg": "last"},
 
     # EXTERNO
-    "reservas_internacionais": {"code": 3546, "agg": "last"},
+    # "reservas_internacionais": {"code": 3546, "agg": "last"},
 
 }
 
