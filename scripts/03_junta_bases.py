@@ -10,7 +10,7 @@ dataset_final = bcb.merge(
 ).sort_values("date").reset_index(drop=True)
 
 dataset_final.to_csv(
-    "site/data/dataset_macro_mercado_mensal.csv",
+    "data/dataset_macro_mercado_mensal.csv",
     index=False
 )
 
